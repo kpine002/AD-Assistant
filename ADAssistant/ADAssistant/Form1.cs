@@ -72,7 +72,7 @@ namespace ADAssistant
             String output = "", emplOutput = "", studentOutput = "", visitorOutput = "", macOutput = "";
             if (pantherID.Length == 7 || fiuUsername != "") // Panther ID
             {
-                DirectorySearcher emplDS = new DirectorySearcher(new DirectoryEntry("LDAP://DC=ad,DC=fiu,DC=edu"));
+                DirectorySearcher emplDS = new DirectorySearcher(new DirectoryEntry(/*LDAP HERE*/));
                 if (fiuUsername != "")
                 {
                     emplDS.Filter = "(&((&(objectCategory=Person)))(sAMAccountName=" + fiuUsername + "))";
@@ -308,7 +308,7 @@ namespace ADAssistant
                 }
 
 
-                DirectorySearcher studentDS = new DirectorySearcher(new DirectoryEntry("LDAP://DC=panther, DC=ad,DC=fiu,DC=edu"));
+                DirectorySearcher studentDS = new DirectorySearcher(new DirectoryEntry(/*LDAP HERE*/)));
                 if (fiuUsername != "")
                 {
                     studentDS.Filter = "(&((&(objectCategory=Person)))(sAMAccountName=" + fiuUsername + "))";
@@ -452,7 +452,7 @@ namespace ADAssistant
 
                 if (pantherID != "" && (emplSR != null|| studentSR !=null))
                 {
-                    DirectorySearcher devicesDS = new DirectorySearcher(new DirectoryEntry("LDAP://OU=Networking, DC=ad,DC=fiu,DC=edu"));
+                    DirectorySearcher devicesDS = new DirectorySearcher(new DirectoryEntry(/*LDAP HERE*/)));
                     devicesDS.Filter = "(&((&(objectCategory=Person)))(fiunsseowner=" + pantherID + "))";
                     SearchResultCollection devicesSR = devicesDS.FindAll();
                     if (devicesSR != null)
@@ -474,7 +474,7 @@ namespace ADAssistant
 
             else if (pantherID.Length == 10)// Visitor Account
             {
-                DirectorySearcher visitorDS = new DirectorySearcher(new DirectoryEntry("LDAP://DC=ad,DC=fiu,DC=edu"));
+                DirectorySearcher visitorDS = new DirectorySearcher(new DirectoryEntry(/*LDAP HERE*/)));
                 visitorDS.Filter = "(&((&(objectCategory=Person)))(CN=" + pantherID + "))";
                 SearchResult visitorSR = visitorDS.FindOne();
                 if (visitorSR != null)
@@ -548,7 +548,7 @@ namespace ADAssistant
                 }
                 resultBox.Text = output;
 
-                DirectorySearcher dsColon = new DirectorySearcher(new DirectoryEntry("LDAP://DC=ad,DC=fiu,DC=edu"));
+                DirectorySearcher dsColon = new DirectorySearcher(new DirectoryEntry(/*LDAP HERE*/)));
                 dsColon.Filter = "(&((&(objectCategory=Person)))(CN=" + macColon + "))";
                 SearchResult srColon = dsColon.FindOne();
                 if (srColon != null)
@@ -589,7 +589,7 @@ namespace ADAssistant
                     resultBox.Text = output;
                 }
 
-                DirectorySearcher dsDash = new DirectorySearcher(new DirectoryEntry("LDAP://DC=ad,DC=fiu,DC=edu"));
+                DirectorySearcher dsDash = new DirectorySearcher(new DirectoryEntry(/*LDAP HERE*/)));
                 dsDash.Filter = "(&((&(objectCategory=Person)))(CN=" + macDash + "))";
                 SearchResult srDash = dsDash.FindOne();
                 if (srDash != null)
@@ -616,7 +616,7 @@ namespace ADAssistant
                     resultBox.Text = output;
                 }
 
-                DirectorySearcher dsNone = new DirectorySearcher(new DirectoryEntry("LDAP://DC=ad,DC=fiu,DC=edu"));
+                DirectorySearcher dsNone = new DirectorySearcher(new DirectoryEntry(/*LDAP HERE*/)));
                 dsNone.Filter = "(&((&(objectCategory=Person)))(CN=" + macNone + "))";
                 SearchResult srNone = dsNone.FindOne();
                 if (srNone != null)
