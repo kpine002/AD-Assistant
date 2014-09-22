@@ -1,0 +1,14 @@
+﻿1>------ Build started: Project: ADAssistant, Configuration: Release Any CPU ------
+1>  COM Reference 'WMPLib' is the interop assembly for ActiveX control 'AxWMPLib' but was marked to be linked by the compiler with the /link flag. This COM reference will be treated as a reference and will not be linked.
+1>C:\Users\kapineda\Documents\Visual Studio 2012\Projects\ADAssistant\ADAssistant\Form1.cs(115,38,115,39): warning CS0168: The variable 'e' is declared but never used
+1>C:\Users\kapineda\Documents\Visual Studio 2012\Projects\ADAssistant\ADAssistant\Form1.cs(167,38,167,39): warning CS0168: The variable 'e' is declared but never used
+1>C:\Users\kapineda\Documents\Visual Studio 2012\Projects\ADAssistant\ADAssistant\Form1.cs(176,38,176,39): warning CS0168: The variable 'e' is declared but never used
+1>  ADAssistant -> C:\Users\kapineda\Documents\Visual Studio 2012\Projects\ADAssistant\ADAssistant\bin\Release\ADAssistant.exe
+Building ADAssistant...
+2>------ Publish started: Project: ADAssistant, Configuration: Release Any CPU ------
+Connecting to '\\fs2.ad.fiu.edu\spc$\Kpine\Programs\ADAssistant\'...
+Publishing files...
+Publish success.
+\\fs2.ad.fiu.edu\spc$\Kpine\Programs\ADAssistant\publish.htm
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Publish: 1 succeeded, 0 failed, 0 skipped ==========
